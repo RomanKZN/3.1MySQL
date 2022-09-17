@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.page;
 
 public class VerificationPage {
-    private SelenideElement codeField = $("[data-test-id=code] input");
+    private static SelenideElement codeField = $("[data-test-id=code] input");
     private SelenideElement verifyButton = $("[data-test-id=action-verify]");
     private static SelenideElement errorNotification = $("[data-test-id=error-notification]");
 

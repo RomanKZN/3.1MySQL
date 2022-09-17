@@ -22,9 +22,9 @@ public class BankLoginTest {
     @Test
     @DisplayName("Should successfully login to dashboard with exist login and password from sut test data")
     void shouldSuccesfullLogin(){
-        var LoginPage = open ("http:://localhost:9999", page.LoginPage.class);
+        var loginPage = open ("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getAuthInfoWithTestData();
-        var verificationPage = LoginPage.validLogin(authInfo);
+        var verificationPage = loginPage.validLogin(authInfo);
         verificationPage.verifyVerificationPageVisiblity();
         var verificationCode = SQLHelper.getVerificationCode();
         verificationPage.validVerify(verificationCode.getCode());

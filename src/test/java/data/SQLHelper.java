@@ -16,7 +16,7 @@ public class SQLHelper {
 
     @SneakyThrows
     private static Connection getConn() {
-        return (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
     }
     public static DataHelper.VerificationCode getVerificationCode(){
         var codeSQL = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";

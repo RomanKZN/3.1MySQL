@@ -12,7 +12,6 @@ public class DataHelper {
     private static Faker faker = new Faker(new Locale("en"));
 
     private DataHelper() {
-
     }
 
     public static AuthInfo getAuthInfoWithTestData() {
@@ -31,9 +30,9 @@ public class DataHelper {
         return new AuthInfo(generateRandomLogin(), generateRandomPassword());
     }
 
-    public static VerificationCode generateRandomVerificationCode() {
-        return new VerificationCode(faker.numerify("######"));
-    }
+//    public static VerificationCode generateRandomVerificationCode() {
+//        return new VerificationCode(faker.numerify("######"));
+//    }
 
     @Value
     public static class AuthInfo {
